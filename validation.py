@@ -3,9 +3,13 @@
 '''
 # Import pickle
 import pickle
+# Import random
+import random
+# Import date
+from datetime import *
 
 def main():
-    
+    '''
     # Filename to store login from the user
     filename = "login.dat"
     
@@ -15,6 +19,9 @@ def main():
         create_login(outfile)
     
     display_login(filename)
+    '''
+    
+    create_card()
     
 def create_login(outfile):
     
@@ -74,11 +81,36 @@ def validate_password(password):
 
 def create_card():
     
-    card_name = input("Enter the name on the card: ")
-    card_number = input(int("Enter your card number: "))
-    card_code = input(int("Enter the three digit code on your card: "))
-    card_exp_date = input(int("Enter the expiration date: "))
+    '''
+        Get the user name and create a card based on the user information.
+    '''
+    #card_name = input("Enter the name on the card: ")
     
+    #card_number = input(int("Enter your card number: "))
+    # Loop to populate the card_code
+    code = ""
+    while len(code) < 3:
+        rand_number = random.randrange(1,11)
+        code += str(rand_number)
+    print(code)
+    
+    # Create a random date in 5 years from today
+    exp_date = date.today()
+    
+    # mm/dd/y
+    d3 = exp_date.strftime("%m/%Y")
+    print(d3)
+
+def create_cv():
+    pass
+
+def create_exp_date():
+    pass
+
+def create_card_num():
+    pass
+
+
 def validade_card():
         patterns = {
             'visa': r'^4[0-9]{12}(?:[0-9]{3})?$',
