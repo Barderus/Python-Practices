@@ -4,7 +4,6 @@
 '''
 import requests
 
-api_key = "TeJILMQUoduKl9H9HP6aQovBCahCn5MA"
 
 city = input('Enter city name: ')
 
