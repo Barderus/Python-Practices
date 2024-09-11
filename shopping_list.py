@@ -1,3 +1,4 @@
+# Need to add input validation
 def add_items():
     new_list = []
 
@@ -8,11 +9,10 @@ def add_items():
             break
         else:
             new_list.append(new)
-
-
     return new_list
 
 
+# At the moment, it is not removing items. Need to check this asap
 def remove_items(grocery_list):
     out_list = []
 
@@ -30,19 +30,23 @@ def remove_items(grocery_list):
     print(out_list)
     return out_list
 
+# Gotta make a better display of the grocery list
 def view_list(grocery_list):
     for index, value in enumerate(grocery_list):
         print(index, value)
 
 
+# Need to implement to save the list on a file
 def save_list():
     pass
 
 
+# Need to implement load a list from a file
 def load_list():
     pass
 
 
+# Need to implement clear list to start fresh
 def main():
     grocery_list = []
 
