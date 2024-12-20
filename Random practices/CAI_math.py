@@ -26,6 +26,7 @@ def addition(level):
     '''
     correct_answers = 0
     wrong_answers = 0
+    level = 0
     
     while True:
         if correct_answers < 10:
@@ -53,7 +54,7 @@ def addition(level):
             print(message("correct"))
         else:
             wrong_answers += 1
-            print(f"{message("incorrect")}. The correct answer is {result}")
+            #print(f"{message("incorrect")}. The correct answer is {result}")
 
 def subtraction(level):
     pass
